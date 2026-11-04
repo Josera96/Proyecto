@@ -46,7 +46,8 @@
         "y": 240,
         "wires": [
             [
-                "7cbb8418d8e9bc5d"
+                "7cbb8418d8e9bc5d",
+                "72ca868acded8fc6"
             ]
         ]
     },
@@ -84,7 +85,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
+        "x": 720,
         "y": 180,
         "wires": []
     },
@@ -105,8 +106,29 @@
         "font": "",
         "fontSize": "35",
         "color": "#0000ff",
-        "x": 720,
+        "x": 730,
         "y": 240,
         "wires": []
+    },
+    {
+        "id": "72ca868acded8fc6",
+        "type": "function",
+        "z": "2e55dc8684909810",
+        "name": "function 1",
+        "func": "msg.payload = Math.floor(Math.random() * 6) + 1;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 300,
+        "wires": [
+            [
+                "c586f73dcedddde5",
+                "4b24489a0b8bc77a"
+            ]
+        ]
     }
 ]
