@@ -122,13 +122,34 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
+        "x": 420,
         "y": 300,
         "wires": [
             [
                 "c586f73dcedddde5",
-                "4b24489a0b8bc77a"
+                "20e6f2d31992fedc"
             ]
         ]
+    },
+    {
+        "id": "20e6f2d31992fedc",
+        "type": "ui_text",
+        "z": "2e55dc8684909810",
+        "group": "grupo_dado",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 690,
+        "y": 300,
+        "wires": []
     }
 ]
