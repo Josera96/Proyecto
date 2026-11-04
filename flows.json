@@ -1,22 +1,112 @@
 [
     {
-        "id": "19383bb9f2419e3a",
+        "id": "2e55dc8684909810",
         "type": "tab",
-        "label": "Flujo 1",
+        "label": "Dado Digital",
         "disabled": false,
-        "info": "",
-        "env": []
+        "info": "Simulador de lanzamiento de dados para Node-RED"
     },
     {
-        "id": "09b64e9ce608ac98",
-        "type": "markdown",
-        "z": "19383bb9f2419e3a",
-        "name": "",
-        "property": "payload",
-        "x": 430,
-        "y": 220,
+        "id": "tab_dado",
+        "type": "ui_tab",
+        "name": "Dado Interactivo",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "grupo_dado",
+        "type": "ui_group",
+        "name": "Juego de Mesa Digital",
+        "tab": "tab_dado",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4a6f6231d069e044",
+        "type": "inject",
+        "z": "2e55dc8684909810",
+        "name": "Lanzar Dado",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 240,
         "wires": [
-            []
+            [
+                "7cbb8418d8e9bc5d"
+            ]
         ]
+    },
+    {
+        "id": "7cbb8418d8e9bc5d",
+        "type": "function",
+        "z": "2e55dc8684909810",
+        "name": "Generar Número 1 al 6",
+        "func": "msg.payload = Math.floor(Math.random() * 6) + 1;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 240,
+        "wires": [
+            [
+                "c586f73dcedddde5",
+                "4b24489a0b8bc77a"
+            ]
+        ]
+    },
+    {
+        "id": "c586f73dcedddde5",
+        "type": "debug",
+        "z": "2e55dc8684909810",
+        "name": "Consola",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4b24489a0b8bc77a",
+        "type": "ui_text",
+        "z": "2e55dc8684909810",
+        "group": "grupo_dado",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Resultado Visual",
+        "label": "Resultado del Lanzamiento",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "35",
+        "color": "#0000ff",
+        "x": 720,
+        "y": 240,
+        "wires": []
     }
 ]
