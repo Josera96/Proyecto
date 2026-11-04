@@ -140,7 +140,7 @@
         "width": 0,
         "height": 0,
         "name": "Resultado visual",
-        "label": "aResultado del Lanzamiento",
+        "label": "Resultado del Lanzamiento",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
