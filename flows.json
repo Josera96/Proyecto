@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "id": "19383bb9f2419e3a",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "09b64e9ce608ac98",
+        "type": "markdown",
+        "z": "19383bb9f2419e3a",
+        "name": "",
+        "property": "payload",
+        "x": 430,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    }
+]
